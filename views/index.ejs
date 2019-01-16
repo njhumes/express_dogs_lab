@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+</head>
+<body>
+    <ul>
+        <% for(let i = 0; i < dogsList.length; i++){ %>
+            <li><a href='/dogs/<%=i%>'><%=dogsList[i].name%></a></li>
+            <form method="POST" action="/dogs/<%=i%>/?_method=DELETE">
+                <button type="submit">Delete <%=dogsList[i].name%></button>
+            </form>
+            <a href='/dogs/<%=i%>/edit'>Edit <%=dogsList[i].name%></a><br><br>
+      <%  } %>
+    </ul>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+   
+</head>
+<body>
+    Name: <%=dogsShow.name%><br>
+    Breed: <%=dogsShow.breed%><br>
+    Age: <%=dogsShow.age%><br>
+
+    <a href='/dogs/<%=index%>/edit'>Edit <%=dogsShow.name%></a>
+    <form method="POST" action="/dogs/<%=index%>/?_method=DELETE">
+        <button type="submit">Delete <%=dogsShow.name%></button>
+    </form>
+
+</body>
+</html>
